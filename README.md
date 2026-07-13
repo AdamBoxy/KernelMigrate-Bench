@@ -1,4 +1,6 @@
-# KernelMigrate
+# KernelMigrate  
+
+[![Python tests](https://github.com/AdamBoxy/KernelMigrate-Bench/actions/workflows/python-app.yml/badge.svg)](https://github.com/AdamBoxy/KernelMigrate-Bench/actions/workflows/python-app.yml)  
 
 **Can an AI keep accelerated code alive while the stack changes underneath it?**
 
