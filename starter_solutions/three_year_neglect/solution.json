@@ -1,0 +1,1 @@
+{"backend":"cuda","runtime":"11.8","target":"sm_80","implementation":"relu","apis":["cudaMalloc","cudaMemcpy"],"launch":{"block_size":128,"vector_width":1,"waves":8},"tuning":{"generated_for":"sm_80","source":"legacy_device_query"},"validation":[]}
