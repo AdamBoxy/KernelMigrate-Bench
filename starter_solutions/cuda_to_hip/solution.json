@@ -1,0 +1,1 @@
+{"backend":"cuda","runtime":"12.4","target":"sm_90","implementation":"axpy","apis":["cudaMalloc","cudaMemcpy","<<<"],"launch":{"block_size":256,"vector_width":4,"waves":4},"tuning":{"generated_for":"sm_90","source":"old_cache"},"validation":[]}
