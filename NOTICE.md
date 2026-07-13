@@ -1,6 +1,6 @@
 # Attribution
 
-The originating question behind KernelMigrate, whether AI can maintain and migrate kernels across CUDA/HIP, GPU architecture, ROCm, and autotuning drift rather than merely generate them—was raised by  
+The originating question behind KernelMigrate, whether AI can maintain and migrate kernels across CUDA/HIP, GPU architecture, ROCm, and autotuning drift rather than merely generate them was raised by:    
 
 **Paige Bailey**, DevX Eng. Lead at Google Deepmind. 
 
