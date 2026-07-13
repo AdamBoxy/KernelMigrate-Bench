@@ -1,0 +1,1 @@
+{"backend":"hip","runtime":"7.0","target":"gfx942","implementation":"axpy","apis":["hipMalloc","hipMemcpy","hipLaunchKernelGGL"],"launch":{"block_size":256,"vector_width":4,"waves":4},"tuning":{"generated_for":"gfx942","source":"fresh_search"},"validation":["build","differential","benchmark"]}
