@@ -3,6 +3,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 ![Python](https://img.shields.io/badge/python-3.10%20%7C%203.11%20%7C%203.12%20%7C%203.13-blue)  
 [![Python tests](https://github.com/AdamBoxy/KernelMigrate-Bench/actions/workflows/python-app.yml/badge.svg)](https://github.com/AdamBoxy/KernelMigrate-Bench/actions/workflows/python-app.yml)  
+[![GitHub release](https://img.shields.io/github/v/release/AdamBoxy/KernelMigrate-Bench)](https://github.com/AdamBoxy/KernelMigrate-Bench/releases/latest)
 
 **Can an AI keep accelerated code alive while the stack changes underneath it?**
 
