@@ -1,0 +1,387 @@
+{
+  "benchmark": "KernelMigrate",
+  "version": "0.1.0",
+  "candidate": "starter_solutions",
+  "generated_at": "2026-07-12T22:51:49.491824+00:00",
+  "score": 49.99,
+  "max_score": 100,
+  "tasks": [
+    {
+      "id": "cuda_to_hip",
+      "title": "CUDA to HIP port",
+      "score": 50,
+      "raw_score": 53.78,
+      "max_score": 100,
+      "performance_ratio": 1.22,
+      "checks": [
+        {
+          "dimension": "semantic",
+          "label": "Differential probes (17/17)",
+          "points": 35.0,
+          "possible": 35,
+          "passed": true
+        },
+        {
+          "dimension": "migration",
+          "label": "Backend migrated",
+          "points": 0,
+          "possible": 6,
+          "passed": false
+        },
+        {
+          "dimension": "migration",
+          "label": "Runtime migrated",
+          "points": 0,
+          "possible": 5,
+          "passed": false
+        },
+        {
+          "dimension": "migration",
+          "label": "Required APIs present",
+          "points": 0,
+          "possible": 9,
+          "passed": false
+        },
+        {
+          "dimension": "target",
+          "label": "Target architecture declared",
+          "points": 0,
+          "possible": 8,
+          "passed": false
+        },
+        {
+          "dimension": "target",
+          "label": "Tuning generated for target",
+          "points": 0,
+          "possible": 7,
+          "passed": false
+        },
+        {
+          "dimension": "performance",
+          "label": "Estimated regression 1.22x (limit 1.15x)",
+          "points": 18.78,
+          "possible": 20,
+          "passed": false
+        },
+        {
+          "dimension": "hygiene",
+          "label": "Legacy tokens removed",
+          "points": 0,
+          "possible": 5,
+          "passed": false
+        },
+        {
+          "dimension": "hygiene",
+          "label": "Validation evidence recorded",
+          "points": 0,
+          "possible": 5,
+          "passed": false
+        }
+      ],
+      "hard_failures": [
+        "Candidate targets the wrong architecture."
+      ]
+    },
+    {
+      "id": "gfx942_to_gfx950",
+      "title": "Architecture bump",
+      "score": 50,
+      "raw_score": 57.18,
+      "max_score": 100,
+      "performance_ratio": 1.8053,
+      "checks": [
+        {
+          "dimension": "semantic",
+          "label": "Differential probes (17/17)",
+          "points": 35.0,
+          "possible": 35,
+          "passed": true
+        },
+        {
+          "dimension": "migration",
+          "label": "Backend migrated",
+          "points": 6,
+          "possible": 6,
+          "passed": true
+        },
+        {
+          "dimension": "migration",
+          "label": "Runtime migrated",
+          "points": 0,
+          "possible": 5,
+          "passed": false
+        },
+        {
+          "dimension": "migration",
+          "label": "Required APIs present",
+          "points": 9,
+          "possible": 9,
+          "passed": true
+        },
+        {
+          "dimension": "target",
+          "label": "Target architecture declared",
+          "points": 0,
+          "possible": 8,
+          "passed": false
+        },
+        {
+          "dimension": "target",
+          "label": "Tuning generated for target",
+          "points": 0,
+          "possible": 7,
+          "passed": false
+        },
+        {
+          "dimension": "performance",
+          "label": "Estimated regression 1.81x (limit 1.10x)",
+          "points": 7.18,
+          "possible": 20,
+          "passed": false
+        },
+        {
+          "dimension": "hygiene",
+          "label": "Legacy tokens removed",
+          "points": 0,
+          "possible": 5,
+          "passed": false
+        },
+        {
+          "dimension": "hygiene",
+          "label": "Validation evidence recorded",
+          "points": 0,
+          "possible": 5,
+          "passed": false
+        }
+      ],
+      "hard_failures": [
+        "Candidate targets the wrong architecture."
+      ]
+    },
+    {
+      "id": "rocm_n_to_n1",
+      "title": "ROCm runtime upgrade",
+      "score": 76.0,
+      "raw_score": 76.0,
+      "max_score": 100,
+      "performance_ratio": 1.0,
+      "checks": [
+        {
+          "dimension": "semantic",
+          "label": "Differential probes (17/17)",
+          "points": 35.0,
+          "possible": 35,
+          "passed": true
+        },
+        {
+          "dimension": "migration",
+          "label": "Backend migrated",
+          "points": 6,
+          "possible": 6,
+          "passed": true
+        },
+        {
+          "dimension": "migration",
+          "label": "Runtime migrated",
+          "points": 0,
+          "possible": 5,
+          "passed": false
+        },
+        {
+          "dimension": "migration",
+          "label": "Required APIs present",
+          "points": 0,
+          "possible": 9,
+          "passed": false
+        },
+        {
+          "dimension": "target",
+          "label": "Target architecture declared",
+          "points": 8,
+          "possible": 8,
+          "passed": true
+        },
+        {
+          "dimension": "target",
+          "label": "Tuning generated for target",
+          "points": 7,
+          "possible": 7,
+          "passed": true
+        },
+        {
+          "dimension": "performance",
+          "label": "Estimated regression 1.00x (limit 1.12x)",
+          "points": 20,
+          "possible": 20,
+          "passed": true
+        },
+        {
+          "dimension": "hygiene",
+          "label": "Legacy tokens removed",
+          "points": 0,
+          "possible": 5,
+          "passed": false
+        },
+        {
+          "dimension": "hygiene",
+          "label": "Validation evidence recorded",
+          "points": 0,
+          "possible": 5,
+          "passed": false
+        }
+      ],
+      "hard_failures": []
+    },
+    {
+      "id": "stale_autotune",
+      "title": "Stale autotuning recovery",
+      "score": 64.57,
+      "raw_score": 64.57,
+      "max_score": 100,
+      "performance_ratio": 1.8053,
+      "checks": [
+        {
+          "dimension": "semantic",
+          "label": "Differential probes (17/17)",
+          "points": 35.0,
+          "possible": 35,
+          "passed": true
+        },
+        {
+          "dimension": "migration",
+          "label": "Backend migrated",
+          "points": 6,
+          "possible": 6,
+          "passed": true
+        },
+        {
+          "dimension": "migration",
+          "label": "Runtime migrated",
+          "points": 0,
+          "possible": 5,
+          "passed": false
+        },
+        {
+          "dimension": "migration",
+          "label": "Required APIs present",
+          "points": 9,
+          "possible": 9,
+          "passed": true
+        },
+        {
+          "dimension": "target",
+          "label": "Target architecture declared",
+          "points": 8,
+          "possible": 8,
+          "passed": true
+        },
+        {
+          "dimension": "target",
+          "label": "Tuning generated for target",
+          "points": 0,
+          "possible": 7,
+          "passed": false
+        },
+        {
+          "dimension": "performance",
+          "label": "Estimated regression 1.81x (limit 1.08x)",
+          "points": 6.57,
+          "possible": 20,
+          "passed": false
+        },
+        {
+          "dimension": "hygiene",
+          "label": "Legacy tokens removed",
+          "points": 0,
+          "possible": 5,
+          "passed": false
+        },
+        {
+          "dimension": "hygiene",
+          "label": "Validation evidence recorded",
+          "points": 0,
+          "possible": 5,
+          "passed": false
+        }
+      ],
+      "hard_failures": []
+    },
+    {
+      "id": "three_year_neglect",
+      "title": "Three years of neglect",
+      "score": 9.4,
+      "raw_score": 9.4,
+      "max_score": 100,
+      "performance_ratio": 1.8053,
+      "checks": [
+        {
+          "dimension": "semantic",
+          "label": "Differential probes (0/17)",
+          "points": 0.0,
+          "possible": 35,
+          "passed": false
+        },
+        {
+          "dimension": "migration",
+          "label": "Backend migrated",
+          "points": 0,
+          "possible": 6,
+          "passed": false
+        },
+        {
+          "dimension": "migration",
+          "label": "Runtime migrated",
+          "points": 0,
+          "possible": 5,
+          "passed": false
+        },
+        {
+          "dimension": "migration",
+          "label": "Required APIs present",
+          "points": 0,
+          "possible": 9,
+          "passed": false
+        },
+        {
+          "dimension": "target",
+          "label": "Target architecture declared",
+          "points": 0,
+          "possible": 8,
+          "passed": false
+        },
+        {
+          "dimension": "target",
+          "label": "Tuning generated for target",
+          "points": 0,
+          "possible": 7,
+          "passed": false
+        },
+        {
+          "dimension": "performance",
+          "label": "Estimated regression 1.81x (limit 1.18x)",
+          "points": 9.4,
+          "possible": 20,
+          "passed": false
+        },
+        {
+          "dimension": "hygiene",
+          "label": "Legacy tokens removed",
+          "points": 0,
+          "possible": 5,
+          "passed": false
+        },
+        {
+          "dimension": "hygiene",
+          "label": "Validation evidence recorded",
+          "points": 0,
+          "possible": 5,
+          "passed": false
+        }
+      ],
+      "hard_failures": [
+        "Semantic contract was not preserved.",
+        "Candidate targets the wrong architecture."
+      ]
+    }
+  ]
+}
