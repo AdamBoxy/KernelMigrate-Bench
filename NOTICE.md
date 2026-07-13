@@ -5,4 +5,4 @@ The originating question behind KernelMigrate, whether AI can maintain and migra
 **Paige Bailey**, DevX Lead at Google Deepmind. 
 
 KernelMigrate v0.1 was designed and implemented through collaboration between
-Adam Yates and Nyra GPT in July 2026.
+AdamBoxy and NyraGPT in July 2026.
