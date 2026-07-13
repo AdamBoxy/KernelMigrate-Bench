@@ -1,0 +1,61 @@
+{
+  "name": "KernelMigrate",
+  "version": "0.1.0",
+  "tasks": [
+    {
+      "id": "cuda_to_hip",
+      "title": "CUDA to HIP port",
+      "brief": "Port an AXPY kernel from CUDA 12.4 on sm_90 to ROCm 7.0 on gfx942.",
+      "old": {"backend": "cuda", "runtime": "12.4", "target": "sm_90", "operation": "axpy", "latency_us": 42.0},
+      "target": {"backend": "hip", "runtime": "7.0", "arch": "gfx942"},
+      "required_api": ["hipMalloc", "hipMemcpy", "hipLaunchKernelGGL"],
+      "forbidden": ["cudaMalloc", "cudaMemcpy", "<<<"],
+      "optimal": {"block_size": [256], "vector_width": [4], "waves": [4, 8]},
+      "max_regression": 1.15
+    },
+    {
+      "id": "gfx942_to_gfx950",
+      "title": "Architecture bump",
+      "brief": "Retarget a tuned reduction kernel from gfx942 to gfx950.",
+      "old": {"backend": "hip", "runtime": "6.4", "target": "gfx942", "operation": "reduce_sum", "latency_us": 31.0},
+      "target": {"backend": "hip", "runtime": "7.0", "arch": "gfx950"},
+      "required_api": ["hipLaunchKernelGGL"],
+      "forbidden": ["gfx942"],
+      "optimal": {"block_size": [256, 512], "vector_width": [4, 8], "waves": [4]},
+      "max_regression": 1.10
+    },
+    {
+      "id": "rocm_n_to_n1",
+      "title": "ROCm runtime upgrade",
+      "brief": "Restore a layer-normalization kernel after a ROCm 6.4 to 7.0 upgrade.",
+      "old": {"backend": "hip", "runtime": "6.4", "target": "gfx942", "operation": "layer_norm", "latency_us": 54.0},
+      "target": {"backend": "hip", "runtime": "7.0", "arch": "gfx942"},
+      "required_api": ["hipGetDeviceProperties", "hipLaunchKernelGGL"],
+      "forbidden": ["rocm-6.4", "legacy_device_query"],
+      "optimal": {"block_size": [256], "vector_width": [2, 4], "waves": [4, 8]},
+      "max_regression": 1.12
+    },
+    {
+      "id": "stale_autotune",
+      "title": "Stale autotuning recovery",
+      "brief": "Refresh a matrix-vector kernel configuration copied from gfx942 for gfx950.",
+      "old": {"backend": "hip", "runtime": "6.4", "target": "gfx942", "operation": "matvec", "latency_us": 68.0},
+      "target": {"backend": "hip", "runtime": "7.0", "arch": "gfx950"},
+      "required_api": ["hipLaunchKernelGGL"],
+      "forbidden": ["autotune:gfx942", "rocm-6.4"],
+      "optimal": {"block_size": [256], "vector_width": [8], "waves": [4]},
+      "max_regression": 1.08
+    },
+    {
+      "id": "three_year_neglect",
+      "title": "Three years of neglect",
+      "brief": "Recover a fused bias+GELU kernel across backend, architecture, runtime, and tuning drift.",
+      "old": {"backend": "cuda", "runtime": "11.8", "target": "sm_80", "operation": "bias_gelu", "latency_us": 77.0},
+      "target": {"backend": "hip", "runtime": "7.0", "arch": "gfx950"},
+      "required_api": ["hipMalloc", "hipMemcpy", "hipLaunchKernelGGL", "hipGetDeviceProperties"],
+      "forbidden": ["cuda", "sm_80", "rocm-6.4", "legacy_device_query"],
+      "optimal": {"block_size": [256, 512], "vector_width": [4, 8], "waves": [4]},
+      "max_regression": 1.18
+    }
+  ]
+}
