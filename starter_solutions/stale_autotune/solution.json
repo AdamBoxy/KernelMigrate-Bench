@@ -1,0 +1,1 @@
+{"backend":"hip","runtime":"6.4","target":"gfx950","implementation":"matvec","apis":["hipLaunchKernelGGL"],"launch":{"block_size":64,"vector_width":2,"waves":8},"tuning":{"generated_for":"gfx942","source":"autotune:gfx942 rocm-6.4"},"validation":["build","differential"]}
