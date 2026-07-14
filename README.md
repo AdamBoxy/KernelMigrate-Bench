@@ -71,7 +71,15 @@ replacing the simulated checks with:
 4. profiler-backed latency and throughput measurements;
 5. clean-room hidden shapes, dtypes, alignments, and edge cases.
 
-See `docs/HARDWARE_EXECUTOR.md`.
+See `docs/HARDWARE_EXECUTOR.md`.  
+
+## Kaggle demonstration
+
+A fully reproducible Kaggle notebook runs the test suite, prepares the stale
+maintenance workspace, and generates benchmark reports.
+
+- [Open the Kaggle notebook](https://www.kaggle.com/code/boxyml/kernelmigrate-bench)
+- [View the notebook source](notebooks/kernelmigrate-bench.ipynb)  
 
 ## License
 
